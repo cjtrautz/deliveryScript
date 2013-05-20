@@ -13,13 +13,6 @@ $(function() {
     buttons: {
       "Deny Message": function() {
       //This is where I need to put the onclick event
-        allFields.removeClass( "ui-state-error" );
-        $( "#users tbody" ).append( "<tr>" +
-           "<td>" + client.val() + "</td>" +
-           "<td>" + message.val() + "</td>" +
-           "<td>" + response.val() + "</td>" +
-           "</tr>" );
-        $( this ).click(function(){
             $.ajax({
                 method: 'post',
                 url: 'http://cjtrautz.me/testscript.php',
@@ -29,9 +22,7 @@ $(function() {
                     success: function(data) {
                         $('#data').text(data);
                     }
-            });
-        });
-        
+            });  
       },
       Cancel: function() {
         $( this ).dialog( "close" );
@@ -47,13 +38,6 @@ $(function() {
     buttons: {
       "Question Message": function() {
       //This is where I need to put the onclick event
-      allFields.removeClass( "ui-state-error" );
-        $( "#users tbody" ).append( "<tr>" +
-           "<td>" + client.val() + "</td>" +
-           "<td>" + message.val() + "</td>" +
-           "<td>" + response.val() + "</td>" +
-           "</tr>" );
-        $( this ).click(function(){
             $.ajax({
                 method: 'post',
                 url: 'http://cjtrautz.me/testscript.php',
@@ -64,8 +48,6 @@ $(function() {
                         $('#data').text(data);
                     }
             });
-        });
-        
       },
       Cancel: function() {
         $( this ).dialog( "close" );
