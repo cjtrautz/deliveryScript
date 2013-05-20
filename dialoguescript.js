@@ -12,17 +12,19 @@ $(function() {
     modal: true,
     buttons: {
       "Deny Message": function() {
-      //This is where I need to put the onclick event
+            var subjectString = 'Your list has been denied.';
             $.ajax({
-                method: 'post',
+                method: 'get',
                 url: 'http://cjtrautz.me/testscript.php',
-                    data: {                  
+                    data: {     
+                       'subject': subjectString,     
                        'ajax': true
                     },
                     success: function(data) {
                         $('#data').text(data);
                     }
-            });  
+            }); 
+             $( this ).dialog( "close" );
       },
       Cancel: function() {
         $( this ).dialog( "close" );
@@ -37,17 +39,19 @@ $(function() {
     modal: true,
     buttons: {
       "Question Message": function() {
-      //This is where I need to put the onclick event
+            var subjectString = 'Your list has been questioned.';
             $.ajax({
-                method: 'post',
+                method: 'get',
                 url: 'http://cjtrautz.me/testscript.php',
-                    data: {                  
+                    data: { 
+                       'subject': subjectString,                 
                        'ajax': true
                     },
                     success: function(data) {
                         $('#data').text(data);
                     }
             });
+            $( this ).dialog( "close" );
       },
       Cancel: function() {
         $( this ).dialog( "close" );

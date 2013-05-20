@@ -1,38 +1,36 @@
-<!DOCTYPE html>
 <html>
 
     <head>
-        <title>Double Optin Deny</title>
+        <title>List Deny</title>
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         <script src="http://cjtrautz.me/Projects/Delivery/DeclineScript/dialoguescript.js"></script>
-        <link rel="stylesheet" href="cjtrautz.me/Projects/Delivery/DeclineScript/style.css" />
     </head>
     
     <body>
         <div id="question-form" title="Question Message">
-            <form>
+            <form method="post">
                 <fieldset>
                     <label for="name">Client</label>
-                    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
-                    <label for="email">Message</label>
-                    <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
-                    <label for="password">Response</label>
-                    <input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
+                    <input type="hidden" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+                    <label for="email">email</label>
+                    <input type="hidden" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
+                    <label for="textarea" name="comment">Comment</label>
+                    <textarea rows="3" cols="25"></textarea>
                 </fieldset>
            </form>
         </div>
 
         <div id="deny-form" title="Deny Message">
-            <form>
+            <form method="get">
                 <fieldset>
                     <label for="name">Client</label>
-                    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
-                    <label for="email">Message</label>
-                    <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
-                    <label for="password">Response</label>
-                    <input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
+                    <input type="hidden" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+                    <label for="email">email</label>
+                    <input type="hidden" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
+                    <label for="textarea" name="comment">Comment</label>
+                    <textarea rows="3" cols="25"></textarea>
                 </fieldset>
            </form>
         </div>
