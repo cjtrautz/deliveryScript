@@ -19,7 +19,18 @@ $(function() {
            "<td>" + message.val() + "</td>" +
            "<td>" + response.val() + "</td>" +
            "</tr>" );
-        $( this ).dialog( "close" );
+        $( this ).click(function(){
+            $.ajax({
+                method: 'post',
+                url: 'http://cjtrautz.me/testscript.php',
+                    data: {                  
+                       'ajax': true
+                    },
+                    success: function(data) {
+                        $('#data').text(data);
+                    }
+            });
+        });
         
       },
       Cancel: function() {
@@ -36,13 +47,24 @@ $(function() {
     buttons: {
       "Question Message": function() {
       //This is where I need to put the onclick event
-        allFields.removeClass( "ui-state-error" );
+      allFields.removeClass( "ui-state-error" );
         $( "#users tbody" ).append( "<tr>" +
            "<td>" + client.val() + "</td>" +
            "<td>" + message.val() + "</td>" +
            "<td>" + response.val() + "</td>" +
            "</tr>" );
-        $( this ).dialog( "close" );
+        $( this ).click(function(){
+            $.ajax({
+                method: 'post',
+                url: 'http://cjtrautz.me/testscript.php',
+                    data: {                  
+                       'ajax': true
+                    },
+                    success: function(data) {
+                        $('#data').text(data);
+                    }
+            });
+        });
         
       },
       Cancel: function() {
