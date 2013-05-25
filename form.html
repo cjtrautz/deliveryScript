@@ -12,25 +12,21 @@
         <div id="question-form" title="Question Message">
             <form method="post">
                 <fieldset>
-                    <label for="name">Client</label>
                     <input type="hidden" name="name" id="name" class="text ui-widget-content ui-corner-all" />
-                    <label for="email">email</label>
                     <input type="hidden" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
-                    <label for="textarea" name="comment">Comment</label>
-                    <textarea rows="3" cols="25"></textarea>
+                    <label for="textarea" name="comment">Response</label>
+                    <textarea rows="3" cols="25" id="qresponse"></textarea>
                 </fieldset>
            </form>
         </div>
 
         <div id="deny-form" title="Deny Message">
-            <form method="get">
-                <fieldset>
-                    <label for="name">Client</label>
-                    <input type="hidden" name="name" id="name" class="text ui-widget-content ui-corner-all" />
-                    <label for="email">email</label>
-                    <input type="hidden" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
-                    <label for="textarea" name="comment">Comment</label>
-                    <textarea rows="3" cols="25"></textarea>
+            <form method="post">
+                <fieldset>                   
+                    <input type="hidden" name="name" id="client" class="text ui-widget-content ui-corner-all" />                
+                    <input type="hidden" name="email" id="message" value="" class="text ui-widget-content ui-corner-all" />
+                    <label for="textarea" name="response">Response</label>
+                    <textarea rows="3" cols="25" id="dresponse"></textarea>
                 </fieldset>
            </form>
         </div>

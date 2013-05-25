@@ -1,10 +1,4 @@
 $(function() {
-  var client = $( "#client" ),
-    message = $( "#message" ),
-    response = $( "#response" ),
-    allFields = $( [] ).add( client ).add( message ).add( response ),
-    tips = $( ".validateTips" );
-
   $( "#deny-form" ).dialog({
     autoOpen: false,
     height: 300,
@@ -13,11 +7,13 @@ $(function() {
     buttons: {
       "Deny Message": function() {
             var subjectString = 'Your list has been denied.';
+            var reply = document.getElementById('dresponse').value;
             $.ajax({
-                method: 'get',
+                method: 'post',
                 url: 'http://cjtrautz.me/testscript.php',
                     data: {     
-                       'subject': subjectString,     
+                       'subject': subjectString,    
+                       'body': reply, 
                        'ajax': true
                     },
                     success: function(data) {
@@ -40,11 +36,13 @@ $(function() {
     buttons: {
       "Question Message": function() {
             var subjectString = 'Your list has been questioned.';
+            var reply = document.getElementById('qresponse').value;
             $.ajax({
-                method: 'get',
+                method: 'post',
                 url: 'http://cjtrautz.me/testscript.php',
                     data: { 
-                       'subject': subjectString,                 
+                       'subject': subjectString,    
+                       'body': reply,             
                        'ajax': true
                     },
                     success: function(data) {
