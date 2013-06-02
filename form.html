@@ -10,25 +10,36 @@
     
     <body>
         <div id="question-form" title="Question Message">
-            <form method="post">
-                <fieldset>
-                    <input type="hidden" name="name" id="name" class="text ui-widget-content ui-corner-all" />
-                    <input type="hidden" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
-                    <label for="textarea" name="comment">Response</label>
-                    <textarea rows="3" cols="25" id="qresponse"></textarea>
-                </fieldset>
-           </form>
+            <form action="" method="post">
+            <select name="responses">
+            <option value="custom" selected>Custom Message</option>
+            <option value="typo">Typo</option>
+            <option value="suspicious">Suspicious list</option>
+            <option value="misleading">Misleading</option>
+            </select>
+            <fieldset>                   
+            <input type="hidden" name="name" id="client" class="text ui-widget-content ui-corner-all" />              
+            <input type="hidden" name="email" id="message" value="" class="text ui-widget-content ui-corner-all" />
+            <label for="textarea" name="response">Response</label>
+            <textarea rows="3" cols="25" id="dresponse"></textarea>
+            </fieldset>
         </div>
 
         <div id="deny-form" title="Deny Message">
-            <form method="post">
-                <fieldset>                   
-                    <input type="hidden" name="name" id="client" class="text ui-widget-content ui-corner-all" />                
-                    <input type="hidden" name="email" id="message" value="" class="text ui-widget-content ui-corner-all" />
-                    <label for="textarea" name="response">Response</label>
-                    <textarea rows="3" cols="25" id="dresponse"></textarea>
-                </fieldset>
-           </form>
+            <form action="" method="post">
+            <select name="responses">
+            <option value="custom" selected>Custom Message</option>
+            <option value="typo">Typo</option>
+            <option value="suspicious">Suspicious list</option>
+            <option value="misleading">Misleading</option>
+            </select>
+            <fieldset>                   
+            <input type="hidden" name="name" id="client" class="text ui-widget-content ui-corner-all" />              
+            <input type="hidden" name="email" id="message" value="" class="text ui-widget-content ui-corner-all" />
+            <label for="textarea" name="response">Response</label>
+            <textarea rows="3" cols="25" id="dresponse"></textarea>
+            </fieldset>
+            </form>
         </div>
         <span>customers.csv | </span>
         <a href="#">Approve</a> | 
