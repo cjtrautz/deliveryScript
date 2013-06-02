@@ -57,12 +57,12 @@ $(function() {
     },
   });
 
-  $( "#deny" )
+  $( ".deny" )
     .click(function() {
       $( "#deny-form" ).dialog( "open" );
     });
 
-  $( "#question" )
+  $( ".question" )
     .click(function() {
       $( "#question-form" ).dialog( "open" );
     });
