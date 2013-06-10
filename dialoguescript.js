@@ -10,7 +10,7 @@ $(function() {
             var reply = document.getElementById('dresponse').value;
             $.ajax({
                 method: 'post',
-                url: 'http://cjtrautz.me/testscript.php',
+                url: 'http://cjtrautz.me/newTicket.php',
                     data: {     
                        'subject': subjectString,    
                        'body': reply, 

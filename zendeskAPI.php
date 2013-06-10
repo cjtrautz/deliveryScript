@@ -22,7 +22,3 @@ class zendeskAPI{
 	print_r($content);
     }
 }
-
-
-$test = new zendeskAPI;
-$test->createTicket();
